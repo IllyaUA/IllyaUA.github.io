@@ -69,11 +69,11 @@ h1,h2,h3,p{margin:0}
 .hero__pillars i,.hero__role i{font-style:normal;color:var(--blue);margin:0 .35em}
 .hero__name{font-size:clamp(1.8rem,4vw,2.3rem);font-weight:600;color:var(--navy);margin-top:26px}
 .hero__role{font-size:1.15rem;color:var(--ink);margin-top:4px}
-.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;max-width:560px}
+.chips{display:grid;grid-template-columns:auto auto;gap:14px;margin-top:22px;width:max-content;max-width:100%}
 .chip{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--surface);border:1px solid var(--line);border-radius:6px;font-size:1.05rem;color:var(--navy);box-shadow:0 2px 8px rgba(31,58,107,.05);transition:transform .15s,box-shadow .15s,border-color .15s}
 a.chip:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--blue)}
 .chip .arr{margin-left:auto;padding-left:8px;color:var(--blue)}
-.chip--wide{flex:1 1 100%}
+.chip--wide{grid-column:1/-1}
 .chip--soon{cursor:default;color:var(--ink-2)}
 .chip__globe{color:var(--blue);flex:none}
 .chip__ico{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:4px;color:#fff;font:700 .95rem/1 Arial,sans-serif;flex:none}
@@ -186,8 +186,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.2rem);color:var(--navy);margin-top:10px;line-h
   .cards--4,.cards--3{grid-template-columns:1fr}
   .brand__text{font-size:1.6rem}
   .hero__art{opacity:.3}
-  .chips{max-width:none}
-  .chip{flex:1 1 100%}
+  .chips{grid-template-columns:1fr;width:100%}
   .facts li{grid-template-columns:1fr;gap:2px}
   .card--project .card__body{padding-top:0}
   .badge{position:static;align-self:flex-start;margin-top:2px}
