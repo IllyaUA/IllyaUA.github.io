@@ -146,7 +146,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.2rem);color:var(--navy);margin-top:10px;line-h
 .profile-btn--rg{border-color:#00ccbb}
 .profile-btn--orcid{border-color:#a6ce39}
 .profile-btn--medium{border-color:#242424}
-.medium-logo{height:20px;width:auto;flex:none}
+.medium-logo{height:20px;width:90px;max-width:none;flex:none}
 .libutton{display:flex;flex-direction:column;justify-content:center;padding:7px;text-align:center;text-decoration:none!important;color:#fff!important;width:200px;max-width:100%;height:32px;border-radius:16px;background-color:#0a66c2;font:14px/1 "SF Pro Text",Helvetica,sans-serif;margin-top:18px}
 .libutton:hover{background-color:#004182}
 
