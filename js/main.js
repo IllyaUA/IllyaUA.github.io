@@ -6,6 +6,15 @@
 
   document.getElementById('yr').textContent = new Date().getFullYear();
 
+  // "top" links must reach the very top; the sticky header would otherwise stop the jump short
+  [].forEach.call(document.querySelectorAll('a[href="#top"]'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+    });
+  });
+
   burger.addEventListener('click', function () {
     var open = menu.classList.toggle('open');
     burger.setAttribute('aria-expanded', open);
@@ -36,7 +45,7 @@
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['about', 'services', 'projects', 'publications', 'contact'].forEach(function (id) {
+    ['about', 'services', 'projects', 'research', 'contact'].forEach(function (id) {
       var el = document.getElementById(id); if (el) io.observe(el);
     });
     var hero = document.querySelector('.hero');
